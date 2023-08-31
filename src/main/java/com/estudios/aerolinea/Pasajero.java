@@ -10,8 +10,8 @@ package com.estudios.aerolinea;
  */
 
 public class Pasajero {
-    int rut, edad;
-    String nombre, apellido;
+    private int rut, edad;
+    private String nombre, apellido;
 
     public Pasajero(int rut, int edad, String nombre, String apellido) {
         this.rut = rut;
@@ -53,6 +53,11 @@ public class Pasajero {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    @Override
+    public String toString() {
+        return "Pasajero{" + "rut=" + rut + ", edad=" + edad + ", nombre=" + nombre + ", apellido=" + apellido + '}';
     }
     
     

@@ -9,10 +9,11 @@ package com.estudios.aerolinea;
  * @author PaEstudiar
  */
 public class Pasaje {
-    int numVuelo, valor, numAsiento;
-    String destino, fecha;
-    Pasajero pasajero;
-    boolean traeEquipaje;
+    private int numVuelo, numAsiento;
+    private double valor;
+    private String destino, fecha;
+    private Pasajero pasajero;
+    private boolean traeEquipaje;
 
     public Pasaje(int numVuelo, int valor, int numAsiento, String destino, String fecha, Pasajero pasajero, boolean traeEquipaje) {
         this.numVuelo = numVuelo;
@@ -28,7 +29,7 @@ public class Pasaje {
         return numVuelo;
     }
 
-    public int getValor() {
+    public double getValor() {
         return valor;
     }
 
@@ -78,6 +79,11 @@ public class Pasaje {
 
     public void setTraeEquipaje(boolean traeEquipaje) {
         this.traeEquipaje = traeEquipaje;
+    }
+
+    @Override
+    public String toString() {
+        return "Pasaje{" + "numVuelo=" + numVuelo + ", numAsiento=" + numAsiento + ", valor=" + valor + ", destino=" + destino + ", fecha=" + fecha + ", pasajero=" + pasajero + ", traeEquipaje=" + traeEquipaje + '}';
     }
  
 }
